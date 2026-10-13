@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at center, #041b2d, #000);
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #00ffff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  margin-top: 24px;
+}
+
+.chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 16px 0 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff #000;
+}
+
+.message {
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 85%;
+  line-height: 1.4;
+  font-size: 0.85rem;
+  word-wrap: break-word;
+}
+
+.user {
+  background-color: #004c4c;
+  align-self: flex-end;
+  color: #aaffff;
+  text-align: right;
+}
+
+.jarvis {
+  background-color: #002b36;
+  align-self: flex-start;
+  color: #00ffff;
+  text-align: left;
+}
+
+.text-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.text-row input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #00ffff;
+  background: rgba(0, 255, 255, 0.08);
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  outline: none;
+}
+
+.text-row input::placeholder {
+  color: #66ffff;
+}
+
+.text-row button {
+  padding: 8px 14px;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  background: transparent;
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.text-row button:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+.mic-container {
+  text-align: center;
+  position: relative;
+}
+
+.mic-circle {
+  width: 90px;
+  height: 90px;
+  border: 3px solid #00ffff;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.mic-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: #00ffff;
+}
+
+.listening {
+  animation: pulse 1.2s infinite ease-in-out;
+  box-shadow: 0 0 25px #00ffff;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.logout-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ff1a1a;
+}

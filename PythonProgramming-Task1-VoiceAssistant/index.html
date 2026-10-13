@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JARVIS Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+
+    <h1 class="title">J.A.R.V.I.S</h1>
+
+    <div class="chat-box" id="chatBox">
+      <div class="message jarvis">Hello, I am Jarvis. Tap the mic and try: "hello", "what's the time", or "search for Python tutorials".</div>
+    </div>
+
+    <form class="text-row" id="textForm">
+      <input type="text" id="textInput" placeholder="Or type a command..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="mic-container">
+      <div class="mic-circle" id="micCircle"></div>
+      <div class="mic-button" id="micButton" title="Click and speak">🎤</div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
